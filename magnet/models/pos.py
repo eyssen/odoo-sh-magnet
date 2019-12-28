@@ -15,5 +15,5 @@ class PosConfig(models.Model):
     _inherit = 'pos.config'
 
 
-    gps_latitude = fields.Float(u'Latitude')
-    gps_longitude = fields.Float(u'Longitude')
+    gps_latitude = fields.Float(u'Latitude', digits=(12,15))
+    gps_longitude = fields.Float(u'Longitude', digits=(12,15))
