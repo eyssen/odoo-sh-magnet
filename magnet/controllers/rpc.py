@@ -33,7 +33,7 @@ class magnetRPC(RPC):
             response = wsgi_server.xmlrpc_handle_exception_string(error)
         return Response(response=response, mimetype='text/xml')
 
-    @route("/xmlrpc/2/<service>", auth="none", methods=["GET", "POST", "PATCH", "PUT", "DELETE", "OPTIONS"], csrf=False, save_session=False, cors='*')
+    @route("/xmlrpc/2/<service>", auth="none", csrf=False, save_session=False, cors='*')
     def xmlrpc_2(self, service):
         """XML-RPC service that returns faultCode as int."""
         try:
