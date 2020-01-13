@@ -40,7 +40,6 @@ class magnetRPC(RPC):
             response = self._xmlrpc(service)
         except Exception as error:
             response = wsgi_server.xmlrpc_handle_exception_int(error)
-        response.
         return Response(response=response, mimetype='text/xml')
 
     @route('/jsonrpc', type='json', auth="none", save_session=False, cors='*')
