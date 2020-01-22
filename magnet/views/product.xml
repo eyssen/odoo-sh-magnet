@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+
+
+
+		<!-- Product Template -->
+
+        <record id="product_template_view_form" model="ir.ui.view">
+            <field name="name">product.template.form.view</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+
+				<notebook>
+					<page name="print" string="Print">
+						<group>
+							<group>
+								<field name="subimage_position_ax" />
+								<field name="subimage_position_ay" />
+							</group>
+							<group>
+								<field name="subimage_position_bx" />
+								<field name="subimage_position_by" />
+							</group>
+							<field name="print_image" widget="image" />
+						</group>
+					</page>
+				</notebook>
+				
+				<field name="to_weight" position="after">
+					<field name="pos_ids" widget="many2many_tags" />
+				</field>
+
+            </field>
+        </record>
+
+
+
+
+
+    </data>
+</odoo>

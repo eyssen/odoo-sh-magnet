@@ -13,6 +13,7 @@ Magnet Addon
     'depends' : ['point_of_sale'],
     'data': [
         'views/pos.xml',
+        'views/product.xml',
     ],
     'installable': True,
     'application': True,
