@@ -23,7 +23,7 @@ class PosConfig(models.Model):
 
     def search_from_gps_position(self, latitude, longitude):
         R = 6372800 # Föld sugara
-        D = 20000000 # Föld kerületének a fele kb.
+        D = 20000000 # Föld kerületének a fele kb. a távolságot innen kezdjük nézni
         id = 0
         for pos in self.env['pos.config'].search([]):
             phi1 = math.radians(latitude)
