@@ -63,7 +63,7 @@ class PosOrder(models.Model):
                 'state': 'draft',
                 'to_invoice': False,
                 'sequence_number': sequence_number,
-                'name': self.env['ir.sequence'].browse(Order.session_id.config_id.sequence_id.id)._next(),
+                'name': self.env['ir.sequence'].browse(Session.config_id.sequence_id.id)._next(),
                 'company_id': Session.company_id.id,
                 'procelis_id': 1,
                 'nb_print': 0,
