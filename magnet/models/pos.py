@@ -65,7 +65,7 @@ class PosOrder(models.Model):
                 'sequence_number': sequence_number,
                 'name': self.env['ir.sequence'].browse(Session.config_id.sequence_id.id)._next(),
                 'company_id': Session.company_id.id,
-                'procelis_id': 1,
+                'procelist_id': 1,
                 'nb_print': 0,
                 'pos_reference': 'Order ' + format(Session.id, '05d') + '-' + format(pos_id, '03d') + '-' + format(sequence_number, '04d'), #TODO: ezt lehet hogy máshogy kéne számolni
                 'amount_tax': 0,
